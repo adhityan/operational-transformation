@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import Express from 'express';
-import { useContainer } from 'typeorm';
 import gracefulShutdown from 'http-graceful-shutdown';
 import { Container } from 'typedi';
 
@@ -8,22 +7,18 @@ import { Logger, Tracer } from '@adhityan/gc-logger';
 import { Router } from '@adhityan/gc-doc';
 
 import { Config } from './config';
+import { ObjectUtils } from './utils';
 import { APP_NAME } from './constants';
 import * as controllers from './controllers';
 import * as middlewares from './middlewares';
-import { ObjectUtils, initDatabase } from './utils';
 import { authorizationChecker, currentUserChecker } from './middlewares/authentication.middleware';
 
 Logger.init(Config.LOGGER_CONFIG);
-
 Container.set('Config', Config);
-useContainer(Container);
 
 const start = async () => {
     const app: Express.Application = Express();
     app.use(Tracer.expressMiddleware());
-
-    await initDatabase();
 
     Router.initialize(
         app,
@@ -50,7 +45,7 @@ const start = async () => {
             },
             enableDocumentation: true,
             middlewares: <Function[]>ObjectUtils.getObjectValues(middlewares),
-            routePrefix: '/',
+            routePrefix: '/api',
         },
         Container,
     );

@@ -1,9 +1,9 @@
-# Default values for atemplate.
+# Default values for operational-transformation.
 replicaCount: 1
 nameOverride: ''
 
 image:
-    repository: "adhityan/atemplate:1.0.0"
+    repository: "adhityan/operational-transformation:1.0.0"
     pullPolicy: IfNotPresent
 
     #using gc hub pull authentication overides all other provided pull secrets
@@ -21,7 +21,7 @@ service:
 ingress:
     enabled: true
     tls: true
-    host: atemplate.xxx.dev
+    host: operational-transformation.xxx.dev
 
 config:
     environment: development

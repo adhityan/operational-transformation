@@ -1,15 +1,15 @@
-#kubectl create namespace atemplate
-#kubectl config set-context --current --namespace=atemplate
+#kubectl create namespace operational-transformation
+#kubectl config set-context --current --namespace=operational-transformation
 
-#helm install atemplate ./helm --namespace=atemplate --set ingress.hosts\[0\]=template.xxx.dev
-#helm install --dry-run atemplate ./helm --namespace=atemplate --set ingress.hosts\[0\]=atemplate.xxx.dev
-#helm upgrade --dry-run atemplate ./helm --namespace=atemplate --set ingress.hosts\[0\]=atemplate.xxx.dev
-#helm upgrade atemplate ./helm --namespace=atemplate --set ingress.hosts\[0\]=atemplate.xxx.dev
-#helm uninstall atemplate --namespace=atemplate 
+#helm install operational-transformation ./helm --namespace=operational-transformation --set ingress.hosts\[0\]=template.xxx.dev
+#helm install --dry-run operational-transformation ./helm --namespace=operational-transformation --set ingress.hosts\[0\]=operational-transformation.xxx.dev
+#helm upgrade --dry-run operational-transformation ./helm --namespace=operational-transformation --set ingress.hosts\[0\]=operational-transformation.xxx.dev
+#helm upgrade operational-transformation ./helm --namespace=operational-transformation --set ingress.hosts\[0\]=operational-transformation.xxx.dev
+#helm uninstall operational-transformation --namespace=operational-transformation 
 
 apiVersion: v1
-name: atemplate
-description: A helm chart for atemplate kubernetes deployment
+name: operational-transformation
+description: A helm chart for operational-transformation kubernetes deployment
 type: application
 
 dependencies:

@@ -2,12 +2,12 @@
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
-  name:  {{ include "atemplate.name" $ }}-{{ .Values.ingress.host | replace "." "-" }}-cert
+  name:  {{ include "operational-transformation.name" $ }}-{{ .Values.ingress.host | replace "." "-" }}-cert
   namespace: {{ $.Release.Namespace }}
   labels:
-    {{- include "atemplate.labels" $ | nindent 4 }}
+    {{- include "operational-transformation.labels" $ | nindent 4 }}
 spec:
-  secretName: {{ include "atemplate.name" $ }}-{{ .Values.ingress.host | replace "." "-" }}-secret
+  secretName: {{ include "operational-transformation.name" $ }}-{{ .Values.ingress.host | replace "." "-" }}-secret
   issuerRef:
     name: cluster-letsencrypt-production
     kind: ClusterIssuer

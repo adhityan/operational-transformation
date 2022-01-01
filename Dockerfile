@@ -1,6 +1,6 @@
-#docker push adhityan/atemplate:1.0.0
-#docker build -t adhityan/atemplate:1.0.0 .
-#docker run -p 9000:9000 adhityan/atemplate:1.0.0
+#docker push adhityan/operational-transformation:1.0.0
+#docker build -t adhityan/operational-transformation:1.0.0 .
+#docker run -p 9000:9000 adhityan/operational-transformation:1.0.0
 
 #STEP 1
 FROM node:16-alpine as builder

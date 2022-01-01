@@ -1,8 +1,10 @@
+import { Service } from 'typedi';
 import { ResponseSchema } from 'routing-controllers-openapi';
 import { JsonController, Get } from 'routing-controllers';
 
 import { HealthResponse } from '../models';
 
+@Service()
 @JsonController('/health')
 export class LivenessController {
     /*
@@ -10,7 +12,6 @@ export class LivenessController {
      */
     @Get('/live')
     @ResponseSchema(HealthResponse)
-    // eslint-disable-next-line class-methods-use-this
     public async live(): Promise<HealthResponse> {
         return new HealthResponse('Health status OK', 200);
     }
@@ -20,7 +21,6 @@ export class LivenessController {
      */
     @Get('/ready')
     @ResponseSchema(HealthResponse)
-    // eslint-disable-next-line class-methods-use-this
     public async ready(): Promise<HealthResponse> {
         return new HealthResponse('Health status OK', 200);
     }

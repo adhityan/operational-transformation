@@ -17,7 +17,7 @@ services:
         build:
             context: .
             dockerfile: dev.Dockerfile
-        container_name: atemplate-dev
+        container_name: operational-transformation-dev
         networks:
             - backend
         restart: always

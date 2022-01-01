@@ -1,5 +1,5 @@
 {
-  "name": "ATemplate",
+  "name": "operational-transformation",
   "version": "1.0.0",
   "main": "dist/app.js",
   "private": true,
@@ -22,20 +22,18 @@
     "url": "git+https://github.com/adhityan/node-microsite-template"
   },
   "dependencies": {
-    "@adhityan/gc-doc": "^4.0.1",
+    "@adhityan/gc-doc": "4.1.0",
     "@adhityan/gc-logger": "^3.1.7",
     "axios": "^0.24.0",
     "body-parser": "^1.19.1",
+    "class-transformer": "^0.3.1",
     "class-validator": "^0.13.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "http-graceful-shutdown": "^3.1.5",
-    "mysql2": "^2.3.3",
     "routing-controllers": "^0.9.0",
     "routing-controllers-openapi": "^3.1.0",
-    "typedi": "^0.10.0",
-    "typeorm": "^0.2.41",
-    "typeorm-typedi-extensions": "^0.4.1"
+    "typedi": "^0.10.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.0.1",

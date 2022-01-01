@@ -23,7 +23,7 @@ export abstract class BaseConfig {
     /**
      * Container name in K8
      */
-    public CONTAINER_NAME = process.env.CONTAINER_NAME || 'atemplate';
+    public CONTAINER_NAME = process.env.CONTAINER_NAME || 'operational-transformation';
 
     /**
      * MySQL DB Host
@@ -48,7 +48,7 @@ export abstract class BaseConfig {
     /**
      * MySQL DB Database
      */
-    public DB_DATABASE: string = process.env.DB_DATABASE || 'atemplate';
+    public DB_DATABASE: string = process.env.DB_DATABASE || 'operational-transformation';
 
     /**
      * Database table prefix

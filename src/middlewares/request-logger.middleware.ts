@@ -1,6 +1,8 @@
 import { Middleware, ExpressMiddlewareInterface } from 'routing-controllers';
 import { Logger } from '@adhityan/gc-logger';
+import { Service } from 'typedi';
 
+@Service()
 @Middleware({ type: 'before' })
 export class RequestLoggerMiddleWare implements ExpressMiddlewareInterface {
     // eslint-disable-next-line class-methods-use-this

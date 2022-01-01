@@ -1,19 +1,19 @@
-{{- define "atemplate.default-env-config" -}}
+{{- define "operational-transformation.default-env-config" -}}
 - name: HOST
   valueFrom:
     configMapKeyRef:
-      name: {{ include "atemplate.name" . }}-environment
+      name: {{ include "operational-transformation.name" . }}-environment
       key: HOST
 - name: NODE_ENV
   valueFrom:
     configMapKeyRef:
-      name: {{ include "atemplate.name" . }}-environment
+      name: {{ include "operational-transformation.name" . }}-environment
       key: NODE_ENV
 
 - name: EXAMPLE
   valueFrom:
     secretKeyRef:
-      name: {{ include "atemplate.name" . }}-secret
+      name: {{ include "operational-transformation.name" . }}-secret
       key: EXAMPLE
 
 - name: CONTAINER_NAME

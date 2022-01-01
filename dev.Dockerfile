@@ -1,5 +1,5 @@
-#docker build -t adhityan/atemplate:1.0.0-dev -f dev.Dockerfile .
-#docker push adhityan/atemplate:1.0.0-dev
+#docker build -t adhityan/operational-transformation:1.0.0-dev -f dev.Dockerfile .
+#docker push adhityan/operational-transformation:1.0.0-dev
 #Run via compose
 
 FROM node:16-alpine
