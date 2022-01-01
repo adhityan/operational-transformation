@@ -1,0 +1,26 @@
+.App {
+    text-align: left;
+}
+
+.Data {
+    margin: 10px;
+}
+
+.TextArea {
+    width: 40%;
+    height: 200px;
+}
+
+.Pending {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    width: 25%;
+}
+
+.Details {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    width: 25%;
+}

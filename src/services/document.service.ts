@@ -11,7 +11,7 @@ export class DocumentService {
         this.map = {};
     }
 
-    public recordOperation(fileName: string, operation: Operation): number {
+    public recordOperation(fileName: string, operation: Operation): { serialNumber: number; operation: Operation } {
         if (!this.map[fileName]) {
             this.map[fileName] = {
                 currentState: '',
@@ -20,7 +20,7 @@ export class DocumentService {
         }
 
         this.applyOperation(fileName, operation);
-        return this.map[fileName].operations.length;
+        return { operation, serialNumber: this.map[fileName].operations.length };
     }
 
     private applyOperation(fileName: string, operation: Operation): string {
